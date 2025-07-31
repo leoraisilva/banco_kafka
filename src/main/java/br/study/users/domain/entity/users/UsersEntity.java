@@ -8,9 +8,10 @@ public class UsersEntity {
     private String username;
     private String password;
     private Rules rules;
-    private Bank bank;
+    private int numberBank;
     private String document;
-    private Address address;
+    private String  codeAddress;
+    private int numberAddress;
 
     public UsersEntity(String username, String password, Rules rules, String document) {
         this.username = username;
@@ -19,29 +20,31 @@ public class UsersEntity {
         this.document = document;
     }
 
-    public UsersEntity(String username, String password, Rules rules, String document, Address address) {
+    public UsersEntity(String username, String password, Rules rules, String document, String codeAddress, int numberAddress) {
         this.username = username;
         this.password = password;
         this.rules = rules;
         this.document = document;
-        this.address = address;
+        this.codeAddress = codeAddress;
+        this.numberAddress = numberAddress;
     }
 
-    public UsersEntity(String username, String password, Rules rules, String document, Bank bank) {
+    public UsersEntity(String username, String password, Rules rules, String document, int numberBank) {
         this.username = username;
         this.password = password;
         this.rules = rules;
         this.document = document;
-        this.bank = bank;
+        this.numberBank = numberBank;
     }
 
-    public UsersEntity(String username, String password, Rules rules, String document, Address address, Bank bank) {
+    public UsersEntity(String username, String password, Rules rules, String document, String codeAddress, int numberAddress, int numberBank) {
         this.username = username;
         this.password = password;
         this.rules = rules;
         this.document = document;
-        this.address = address;
-        this.bank = bank;
+        this.codeAddress = codeAddress;
+        this.numberAddress = numberAddress;
+        this.numberBank = numberBank;
     }
 
     public String getUsername() {
@@ -56,15 +59,19 @@ public class UsersEntity {
         return rules;
     }
 
-    public Bank getBank() {
-        return bank;
-    }
-
     public String getDocument() {
         return document;
     }
 
-    public Address getAddress() {
-        return address;
+    public int getNumberBank() {
+        return numberBank;
+    }
+
+    public String getCodeAddress() {
+        return codeAddress;
+    }
+
+    public int getNumberAddress() {
+        return numberAddress;
     }
 }

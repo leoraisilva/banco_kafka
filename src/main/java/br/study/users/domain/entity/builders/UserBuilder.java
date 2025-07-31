@@ -9,9 +9,10 @@ public class UserBuilder implements IUserBuilder{
     private String username;
     private String password;
     private Rules rules;
-    private Bank bank;
+    private int numberBank;
     private String document;
-    private Address address;
+    private String  codeAddress;
+    private int numberAddress;
 
 
     @Override
@@ -30,8 +31,8 @@ public class UserBuilder implements IUserBuilder{
     }
 
     @Override
-    public void setBank(Bank bank) {
-        this.bank = bank;
+    public void setNumberBank(int numberBank) {
+        this.numberBank = numberBank;
     }
 
     @Override
@@ -40,8 +41,13 @@ public class UserBuilder implements IUserBuilder{
     }
 
     @Override
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setCodeAddress(String codeAddress) {
+        this.codeAddress = codeAddress;
+    }
+
+    @Override
+    public void setNumberAddress(int numberAddress) {
+        this.numberAddress = numberAddress;
     }
 
     public UsersEntity getResult() {
@@ -49,10 +55,10 @@ public class UserBuilder implements IUserBuilder{
     }
 
     public UsersEntity getAddress() {
-        return new UsersEntity(this.username, this.password, this.rules, this.document, this.address);
+        return new UsersEntity(this.username, this.password, this.rules, this.document, this.codeAddress, this.numberAddress);
     }
     public UsersEntity getBank() {
-        return new UsersEntity(this.username, this.password, this.rules, this.document, this.bank);
+        return new UsersEntity(this.username, this.password, this.rules, this.document, this.numberBank);
     }
 
 }

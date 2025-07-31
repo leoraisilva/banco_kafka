@@ -11,27 +11,33 @@ public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String userId;
-    @Column(name = "username", nullable = false)
+    @Column(name = "username", nullable = false, unique = true)
     private String username;
     @Column(name = "password", nullable = false)
     private String password;
     @Column(name = "rules", nullable = false)
     private Rules rules;
-    @Column(name = "bank", nullable = true)
-    private Bank bank;
+    @Column(name = "number_bank", nullable = true)
+    private int numberBank;
     @Column(name = "document", nullable = false)
     private String document;
-    @Column(name = "address", nullable = true)
-    private Address address;
+    @Column(name = "number_address", nullable = true)
+    private int numberAddress;
+    @Column(name = "code_address", nullable = true)
+    private String codeAddress;
 
-    public UserModel(String username, String password, Rules rules, Bank bank, String document, Address address) {
+    public UserModel(String username, String password, Rules rules, String document, int numberBank, int numberAddress, String  codeAddress) {
         this.username = username;
         this.password = password;
         this.rules = rules;
-        this.bank = bank;
         this.document = document;
-        this.address = address;
+        this.numberBank = numberBank;
+        this.numberAddress = numberAddress;
+        this.codeAddress = codeAddress;
     }
+
+
+    public UserModel() {}
 
     public String getUserId() {
         return userId;
@@ -65,12 +71,12 @@ public class UserModel {
         this.rules = rules;
     }
 
-    public Bank getBank() {
-        return bank;
+    public int getNumberBank() {
+        return numberBank;
     }
 
-    public void setBank(Bank bank) {
-        this.bank = bank;
+    public void setNumberBank(int numberBank) {
+        this.numberBank = numberBank;
     }
 
     public String getDocument() {
@@ -81,11 +87,19 @@ public class UserModel {
         this.document = document;
     }
 
-    public Address getAddress() {
-        return address;
+    public int getNumberAddress() {
+        return numberAddress;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setNumberAddress(int numberAddress) {
+        this.numberAddress = numberAddress;
+    }
+
+    public String getCodeAddress() {
+        return codeAddress;
+    }
+
+    public void setCodeAddress(String codeAddress) {
+        this.codeAddress = codeAddress;
     }
 }

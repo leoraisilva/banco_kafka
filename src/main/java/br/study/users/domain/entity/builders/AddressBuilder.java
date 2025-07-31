@@ -5,7 +5,6 @@ import br.study.users.domain.entity.address.Address;
 public class AddressBuilder implements IAddressBuilder{
     private String address;
     private String code;
-    private int number;
     private String neighborhood;
     private String city;
     private String country;
@@ -19,11 +18,6 @@ public class AddressBuilder implements IAddressBuilder{
     @Override
     public void setCode(String code) {
         this.code = code;
-    }
-
-    @Override
-    public void setNumber(int number) {
-        this.number = number;
     }
 
     @Override
@@ -47,6 +41,6 @@ public class AddressBuilder implements IAddressBuilder{
     }
 
     public Address getResult() {
-        return new Address(this.address, this.code, this.number, this.neighborhood, this.city, this.country, this.state);
+        return new Address(this.address, this.code, this.neighborhood, this.city, this.country, this.state);
     }
 }

@@ -10,7 +10,7 @@ public class CreateUser {
         this.repository = repository;
     }
 
-    public UsersEntity createUser (){
-        return repository.createUser();
+    public UsersEntity createUser (UsersEntity usersEntity){
+        return repository.createUser(usersEntity);
     }
 }

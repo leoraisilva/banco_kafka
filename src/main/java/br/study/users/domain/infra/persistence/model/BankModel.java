@@ -15,14 +15,14 @@ public class BankModel {
     private Account account;
     @Column(name = "mount", nullable = false)
     private double mount;
-    @Column(name = "limit", nullable = false)
-    private double limit;
+    @Column(name = "limits", nullable = false)
+    private double limits;
 
-    public BankModel(int number, Account account, double mount, double limit) {
+    public BankModel(int number, Account account, double mount, double limits) {
         this.number = number;
         this.account = account;
         this.mount = mount;
-        this.limit = limit;
+        this.limits = limits;
     }
 
     public String getBankId() {
@@ -58,10 +58,10 @@ public class BankModel {
     }
 
     public double getLimit() {
-        return limit;
+        return limits;
     }
 
     public void setLimit(double limit) {
-        this.limit = limit;
+        this.limits = limit;
     }
 }

@@ -10,8 +10,8 @@ public class EditUser {
         this.repository = repository;
     }
 
-    public UsersEntity editUser(String username) {
-        return repository.editUser(username);
+    public UsersEntity editUser(String username, UsersEntity entity) {
+        return repository.editUser(username, entity);
     }
 
 }

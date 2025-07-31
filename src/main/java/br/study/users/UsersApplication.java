@@ -1,4 +1,4 @@
-package src.main.java.br.study.users;
+package br.study.users;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

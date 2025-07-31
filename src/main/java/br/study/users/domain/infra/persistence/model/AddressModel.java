@@ -12,8 +12,6 @@ public class AddressModel {
     private String address;
     @Column(name = "code", nullable = false, unique = true)
     private String code;
-    @Column(name = "number", nullable = false)
-    private int number;
     @Column(name = "neighborhood", nullable = false)
     private String neighborhood;
     @Column(name = "city", nullable = false)
@@ -23,10 +21,9 @@ public class AddressModel {
     @Column(name = "state", nullable = false)
     private String state;
 
-    public AddressModel(String address, String code, int number, String neighborhood, String city, String country, String state) {
+    public AddressModel(String address, String code, String neighborhood, String city, String country, String state) {
         this.address = address;
         this.code = code;
-        this.number = number;
         this.neighborhood = neighborhood;
         this.city = city;
         this.country = country;
@@ -37,56 +34,52 @@ public class AddressModel {
         return addressId;
     }
 
+    public void setAddressId(String addressId) {
+        this.addressId = addressId;
+    }
+
     public String getAddress() {
         return address;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public int getNumber() {
-        return number;
-    }
-
-    public String getNeighborhood() {
-        return neighborhood;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public String getState() {
-        return state;
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
 
+    public String getCode() {
+        return code;
+    }
+
     public void setCode(String code) {
         this.code = code;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public String getNeighborhood() {
+        return neighborhood;
     }
 
     public void setNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
     }
 
+    public String getCity() {
+        return city;
+    }
+
     public void setCity(String city) {
         this.city = city;
     }
 
+    public String getCountry() {
+        return country;
+    }
+
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getState() {
+        return state;
     }
 
     public void setState(String state) {

@@ -4,21 +4,20 @@ import br.study.users.domain.entity.bank.Bank;
 import br.study.users.domain.entity.components.Account;
 
 public class BankBuilder implements IBankBuilder{
-    private int number;
+    private int numberBank;
     private Account account;
     private double mount;
     private double limit;
 
     @Override
-    public void setNumber(int number) {
-        this.number = number;
+    public void setNumberBank(int numberBank) {
+        this.numberBank = numberBank;
     }
 
     @Override
     public void setAccount(Account account) {
         this.account = account;
     }
-
     @Override
     public void setMount(double mount) {
         this.mount = mount;
@@ -30,6 +29,6 @@ public class BankBuilder implements IBankBuilder{
     }
 
     public Bank getResult() {
-        return new Bank(this.number, this.account, this.mount, this.limit);
+        return new Bank(this.numberBank, this.account, this.mount, this.limit);
     }
 }

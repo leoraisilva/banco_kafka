@@ -2,15 +2,15 @@ package br.study.users.domain.entity.address;
 
 public class Address {
     private String address;
-    private String code;
+    private String codeAddress;
     private String neighborhood;
     private String city;
     private String country;
     private String state;
 
-    public Address(String address, String code, String neighborhood, String city, String country, String state) {
+    public Address(String address, String codeAddress, String neighborhood, String city, String country, String state) {
         this.address = address;
-        this.code = code;
+        this.codeAddress = codeAddress;
         this.neighborhood = neighborhood;
         this.city = city;
         this.country = country;
@@ -21,8 +21,8 @@ public class Address {
         return address;
     }
 
-    public String getCode() {
-        return code;
+    public String getCodeAddress() {
+        return codeAddress;
     }
 
     public String getNeighborhood() {
